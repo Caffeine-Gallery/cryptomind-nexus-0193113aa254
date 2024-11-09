@@ -1,0 +1,12 @@
+type Article = 
+ record {
+   description: text;
+   title: text;
+   topic: text;
+   url: text;
+ };
+service : {
+  getArticles: () -> (vec Article) query;
+  getArticlesByTopic: (text) -> (vec Article) query;
+  storeArticles: (vec Article) -> ();
+}
